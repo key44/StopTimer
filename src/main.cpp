@@ -24,7 +24,7 @@ int h_log = 0;                  //積算計測時間
 int m_log = 0;                  //積算計測分
 int s_log = 0;                  //積算計測秒
 
-vido rest()
+void reset()
 {
   tmElements_t tm;
   RTC.read(tm); //RCTを使うときの初期設定
