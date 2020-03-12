@@ -23,7 +23,7 @@ int s = 0;                      //計測秒
 int h_log = 0;                  //積算計測時間
 int m_log = 0;                  //積算計測分
 int s_log = 0;                  //積算計測秒
-
+/*
 void reset()
 {
   tmElements_t tm;
@@ -42,12 +42,12 @@ void reset()
   lcd.print(":");
   lcd.print(s_log);
 }
-
+*/
 void setup()
 {
   tmElements_t tm;
   RTC.read(tm);                      //RCTを使うときの初期設定
-  attachInterrupt(0, reset, RISING); //0番ピンがOFFからONに変化したらreset関数を割り込み実行
+  //attachInterrupt(0, reset, RISING); //0番ピンがOFFからONに変化したらreset関数を割り込み実行
   pinMode(sw, INPUT_PULLUP);         //arduino内でプルアップじているので直接スイッチをつける
   pinMode(clock, OUTPUT);            //アナログ時計を動かす用の出力設定
   Serial.begin(9600);
